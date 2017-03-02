@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:local="clr-namespace:ios_pulltorefresh_repro" 
+	x:Class="ios_pulltorefresh_repro.ios_pulltorefresh_reproPage">
+	
+	<ListView x:Name="listView" 
+			ItemsSource="{Binding Items}"
+			IsPullToRefreshEnabled="True"
+			RefreshCommand="{Binding LoadItemsCommand}"
+			IsRefreshing="{Binding IsBusy, Mode=OneWay}" />
+	
+</ContentPage>
